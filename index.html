@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="nav-logo">
+                <span>Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </div>
+            <button class="hamburger">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="full-page pag-hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Showcase of my work and skills</p>
+        </section>
+
+        <div class="content">
+            <section id="about" class="mid-page pag-sec1 shadowblock-low">
+                <h2>About Me</h2>
+                <p>Brief introduction about yourself.</p>
+            </section>
+
+            <section id="projects" class="full-page pag-sec2 shadowblock-high">
+                <h2>My Projects</h2>
+                <div class="project">
+                    <h3>Project VIS</h3>
+                    <p>Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.Description of project 1.</p>
+                    <p>Herramientas:</p>
+                    <div class="pack-herramientas">
+                        <div class="herramienta">Unreal Engine 5</div>
+                        <div class="herramienta">C++</div>
+                        <div class="herramienta">Photoshop</div>
+                        <div class="herramienta">Blender</div>
+                    </div>
+                </div>
+                <div class="project">
+                    <h3>The web of Project VIS</h3>
+                    <p>Description of project 2.</p>
+                </div>
+                <div class="project">
+                    <h3>Version Control Web App</h3>
+                    <p>Description of project 3.</p>
+                </div>
+            </section>
+
+            <section id="contact" class="full-page pag-sec3 shadowblock-low">
+                <h2>Contact</h2>
+                <p>Get in touch with me.</p>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="shadowblock-low">
+        <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScrollTop) {
+                // Scrolling down
+                document.querySelector('header').classList.add('nav-hidden');
+                document.querySelector('.nav-links').classList.remove('nav-open');
+            } else {
+                // Scrolling up
+                document.querySelector('header').classList.remove('nav-hidden');
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('nav-open');
+        });
+    </script>
+</body>
+
+</html>
