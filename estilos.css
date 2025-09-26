@@ -99,6 +99,15 @@ main {
     text-align: center;
     padding: 0rem;
 }
+.adaptative-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
 /* ESTILOS DE SECCIONES */
 .shadowblock-low {
     box-shadow: 0 0 50px 20px rgb(0, 0, 0, 0.4);
