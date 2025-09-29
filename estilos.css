@@ -72,7 +72,7 @@ header.nav-hidden {
 }
 
 .nav-item:hover {
-    color: #e64242;
+    color: rgb(0, 213, 255);
 }
 
 /* Main sections */
@@ -394,6 +394,19 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+.logo-jr {
+    translate: 15px 5px;
+    height: 30px;
+    transition: all 1s;
+}
+.logo-jr:hover {
+    filter: drop-shadow(0 0 4px rgb(256, 256, 256));
+}
+
+.logo-name {
+    margin-left: 35px;
 }
 
 /* Responsive design */
