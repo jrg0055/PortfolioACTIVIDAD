@@ -190,6 +190,56 @@ main {
     margin-right: 2rem;
 }
 
+/* SECCION 3 */
+.pag-sec3 {
+    background: linear-gradient(135deg, #29012c 0%, #04173e 100%);
+    color: #fff;
+}
+.pag-sec3 h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+.pag-sec3 p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+form {
+    width: 600px;
+}
+
+@media (max-width: 700px) {
+    form {
+        width: 85vw;
+    }
+}
+
+form textarea,input {
+    background-color: #c9a7ef;
+    transition: all 2s;
+}
+form textarea:hover,input:hover {
+    background-color: #f0eaf6;
+}
+form textarea:focus ,input:focus {
+    background-color: #f0eaf6;
+    outline: 1px solid #03a2ce;
+    box-shadow: 0 0 15px #03a2ce;
+}
+#terms:hover {
+    background-color: #f0eaf6;
+}
+#terms:focus {
+    background-color: #f0eaf6;
+    outline: 0px solid #03a2ce;
+    box-shadow: 0 0 0px #03a2ce;
+}
+
 
 .project {
     margin-bottom: 2rem;
@@ -324,18 +374,18 @@ textarea {
 
 button {
     padding: 0.75rem;
-    background-color: #333;
+    background-color: #c9a7ef;
     color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 button:hover {
-    background-color: #555;
-    color: red;
+    background-color: #edf5f8;
+    color: rgb(0, 213, 255);
 }
 
 /* Footer */
