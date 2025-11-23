@@ -38,9 +38,6 @@ header.nav-hidden {
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 2rem;
 }
 
@@ -50,28 +47,34 @@ header.nav-hidden {
     color: #fff;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.nav-item {
+.nav-links .nav-link {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     transition: all 0.5s;
+    padding: 0.5rem 0.25rem;
+}
+.nav-links.nav-open {
+        display: flex;
+    }
+
+.navbar-nav {
+    gap: 0.75rem;
 }
 
-.nav-item:hover {
+.hamburger {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(0, 213, 255, 0.4);
+}
+
+.nav-links .nav-link:hover {
     color: rgb(0, 213, 255);
 }
 
@@ -219,14 +222,14 @@ form {
     }
 }
 
-form textarea,input {
+.form-control {
     background-color: #c9a7ef;
     transition: all 2s;
 }
-form textarea:hover,input:hover {
+.form-control:hover {
     background-color: #f0eaf6;
 }
-form textarea:focus ,input:focus {
+.form-control:focus {
     background-color: #f0eaf6;
     outline: 1px solid #03a2ce;
     box-shadow: 0 0 15px #03a2ce;
@@ -309,7 +312,7 @@ form textarea:focus ,input:focus {
 .herramienta {
     position: relative;
     overflow: hidden;
-    flex: 0 1 300px;
+    flex: 0 1 200px;
     padding: 1rem;
     background: linear-gradient(135deg, #ccd3ea 0%, #bfe7f3 100%);
     border-radius: 8px;
@@ -372,7 +375,7 @@ textarea {
     min-height: 100px;
 }
 
-button {
+.btn {
     padding: 0.75rem;
     background-color: #c9a7ef;
     color: #fff;
@@ -383,7 +386,7 @@ button {
     transition: all 0.5s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #edf5f8;
     color: rgb(0, 213, 255);
 }
@@ -397,7 +400,6 @@ footer {
 }
 
 .logo-jr {
-    translate: 15px 5px;
     height: 30px;
     transition: all 1s;
 }
@@ -410,11 +412,11 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media (max-width: 992px) {
     .nav-links {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 132%;
         right: 0;
         background-color: rgba(40, 38, 38, 0.8);
         width: 200px;
@@ -430,7 +432,8 @@ footer {
     .hamburger {
         display: block;
     }
-
+}
+@media (max-width: 600px) {
     #hero h1 {
         font-size: 2rem;
     }
@@ -461,4 +464,8 @@ footer {
     #about p {
         font-size: 0.7rem;
     }
+}
+
+.wireframe {
+    outline: 2px dashed #3dce03;
 }
