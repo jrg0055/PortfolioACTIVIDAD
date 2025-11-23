@@ -391,6 +391,19 @@ textarea {
     color: rgb(0, 213, 255);
 }
 
+#background-audio {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+#presentation-video {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+    display: block;
+}
+
 /* Footer */
 footer {
     background-color: #333;
